@@ -141,45 +141,42 @@ Leads are scored from **0–100** based on:
 }
 ```
 ---
+## ▶️ How to Run the Project
 
-###▶️ How to Run the Project
-
-##1️⃣ Clone the Repository
-
+### 1️⃣ Clone the Repository
+```bash
 git clone <repo-url>
 cd ai-sales-agent
-
-##2️⃣ Create Virtual Environment
-
+```
+### Create Virtual Environment
 python -m venv myvenv
 myvenv\Scripts\activate   # Windows
 
-##3️⃣ Install Dependencies
-
+### Install Dependencies
+```bash
 pip install -r requirements.txt
-
-##4️⃣ Start Ollama
-
+```
+### Start Ollama
+```bash
 ollama run llama3.2:1b
-
-
+```
 Keep this running in the background.
 
-##5️⃣ Start FastAPI Server
-
+### Start FastAPI Serve
+```bash
 uvicorn app.main:app --reload
+```
 
-##🧪 Testing the API
-
-Swagger UI
-
-Open:
-
+### Testing the API
+```json
 http://127.0.0.1:8000/docs
 
-PowerShell Test
-Invoke-RestMethod `
-  -Uri "http://127.0.0.1:8000/chat" `
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/chat" `
   -Method POST `
   -Headers @{ "Content-Type" = "application/json" } `
   -Body '{"lead_id":"123","message":"What is your pricing?"}'
+
+```
+
+
+---
