@@ -139,31 +139,38 @@ Leads are scored from **0–100** based on:
   "lead_score": 60,
   "lead_status": "warm"
 }
+```
 ---
 
 ###▶️ How to Run the Project
 
 ##1️⃣ Clone the Repository
+
 git clone <repo-url>
 cd ai-sales-agent
 
 ##2️⃣ Create Virtual Environment
+
 python -m venv myvenv
 myvenv\Scripts\activate   # Windows
 
 ##3️⃣ Install Dependencies
+
 pip install -r requirements.txt
 
 ##4️⃣ Start Ollama
+
 ollama run llama3.2:1b
 
 
 Keep this running in the background.
 
 ##5️⃣ Start FastAPI Server
+
 uvicorn app.main:app --reload
 
 ##🧪 Testing the API
+
 Swagger UI
 
 Open:
