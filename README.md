@@ -49,19 +49,18 @@ Structured JSON Response
 
 ## 📂 Project Structure
 
-ai-sales-agent/
-│
-├── app/
-│ ├── init.py
-│ ├── main.py # FastAPI entry point
-│ ├── schemas.py # API request/response models
-│ ├── intents.py # Intent detection logic
-│ ├── memory.py # Conversation storage (SQLite)
-│ ├── llm.py # Ollama LLM integration
-│ └── scoring.py # Lead scoring logic
-│
-├── requirements.txt
+ai-sales-agent  
+└── app  
+    ├── __init__.py  
+    ├── main.py        # FastAPI entry point  
+    ├── schemas.py     # API request/response models  
+    ├── intents.py     # Intent detection logic  
+    ├── memory.py      # Conversation storage (SQLite)  
+    ├── llm.py         # Ollama LLM integration  
+    └── scoring.py     # Lead scoring logic  
+├── requirements.txt  
 └── README.md
+
 
 
 ---
@@ -169,8 +168,11 @@ uvicorn app.main:app --reload
 
 ### Testing the API
 ```json
-http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs   #for testing the api working 
 
+```
+
+```json 
 Invoke-RestMethod -Uri "http://127.0.0.1:8000/chat" `
   -Method POST `
   -Headers @{ "Content-Type" = "application/json" } `
