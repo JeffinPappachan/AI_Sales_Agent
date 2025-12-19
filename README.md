@@ -167,11 +167,12 @@ uvicorn app.main:app --reload
 ```
 
 ### Testing the API
+## For testing the api working
 ```json
-http://127.0.0.1:8000/docs   #for testing the api working 
+http://127.0.0.1:8000/docs    
 
 ```
-
+## Inputting the Sample test 
 ```json 
 Invoke-RestMethod -Uri "http://127.0.0.1:8000/chat" `
   -Method POST `
